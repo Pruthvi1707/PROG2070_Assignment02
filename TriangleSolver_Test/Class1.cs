@@ -77,6 +77,83 @@ namespace TriangleSolver_Test
 		}
 
 
+		// Five (5) tests for a valid scalene triangle
+		//(01)
+		[Test]
+		public void Scalene_Side7And8And9_Valid_Test01()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 7;
+			int s_side = 8;
+			int t_side = 9;
+
+			string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(02)
+		[Test]
+		public void Scalene_Side9And10And11_Valid_Test02()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 9;
+			int s_side = 10;
+			int t_side = 11;
+
+			string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(03)
+		[Test]
+		public void Scalene_Side13And12And11_Valid_Test03()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 13;
+			int s_side = 12;
+			int t_side = 11;
+
+			string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(04)
+		[Test]
+		public void Scalene_Side13And14And12_Valid_Test04()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 13;
+			int s_side = 14;
+			int t_side = 12;
+
+			string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(05)
+		[Test]
+		public void Scalene_Side14And15And16_Valid_Test05()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 14;
+			int s_side = 15;
+			int t_side = 16;
+
+			string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+
 
 	}
 }
