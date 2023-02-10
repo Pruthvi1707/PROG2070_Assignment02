@@ -154,6 +154,99 @@ namespace TriangleSolver_Test
 		}
 
 
+		//Three (3) tests for verifying a zero length for one or more sides
+		//(01)
+		[Test]
+		public void Verifying_Zero_Length_AllSideOrMore01()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 0;
+			int s_side = 1;
+			int t_side = 2;
+
+			string expected = "At least one side of your triangle has a zero length and is thus invalid";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(02)
+		[Test]
+		public void Verifying_Zero_Length_AllSideOrMore02()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 10;
+			int s_side = 0;
+			int t_side = 0;
+
+			string expected = "At least one side of your triangle has a zero length and is thus invalid";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(03)
+		[Test]
+		public void Verifying_Zero_Length_AllSideOrMore03()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 11;
+			int s_side = 12;
+			int t_side = 0;
+
+			string expected = "At least one side of your triangle has a zero length and is thus invalid";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		// Three (3) tests for verifying an invalid response (other than a zero length)
+		//(01)
+		[Test]
+		public void Verifying_Invalid_Input_Other_Than_Zero01()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = -11;
+			int s_side = 12;
+			int t_side = 11;
+
+			string expected = "Based on the values entered, the triangle is INVALID";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(02)
+		[Test]
+		public void Verifying_Invalid_Input_Other_Than_Zero02()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 11;
+			int s_side = -12;
+			int t_side = 12;
+
+			string expected = "Based on the values entered, the triangle is INVALID";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+		//(03)
+		[Test]
+		public void Verifying_Invalid_Input_Other_Than_Zero03()
+		{
+			Triangle c1 = new Triangle();
+
+			int f_side = 11;
+			int s_side = 12;
+			int t_side = -11;
+
+			string expected = "Based on the values entered, the triangle is INVALID";
+			string actual = c1.AnalyzeTriangle(f_side, s_side, t_side);
+			Assert.AreEqual(expected, actual);
+		}
+
+
 
 	}
 }
